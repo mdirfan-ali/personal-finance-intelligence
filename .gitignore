@@ -1,8 +1,16 @@
 # Data
-/data/
+/data/*
+!data/sample/
+!data/sample/**
+data/raw/
+data/processed/
+*.csv
+*.parquet
 
 # Mac OS-specific storage files
 .DS_Store
+.vscode/
+.idea/
 
 # vim
 *.swp
@@ -12,8 +20,10 @@
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.pyc
 *.py[cod]
 *$py.class
+.ipynb_checkpoints/
 
 # C extensions
 *.so
@@ -146,7 +156,7 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
+.venv/
 env/
 venv/
 ENV/
@@ -189,3 +199,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#secrects
+*.key
+secrets/
+
+#trained models
+models/*.pkl
+models/*.h5
+*.joblib
