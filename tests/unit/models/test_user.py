@@ -33,6 +33,15 @@ class TestUserCreation:
         assert user.income == 5000.0
 
 
+class TestUserUpdate:
+    
+    def test_user_update(self, valid_user):
+        updated_user = valid_user.update(currency_code = "INR", income = 7700)
+
+        assert updated_user.currency == Currency.INR
+        assert updated_user.income == 7700
+    
+
 class TestUserValidation:
     
     def test_empty_name_raises_valueerror(self):
